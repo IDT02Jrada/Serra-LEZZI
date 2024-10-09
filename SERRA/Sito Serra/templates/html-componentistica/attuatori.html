@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensori</title>
+    <link rel="stylesheet" href="/static/css-componentistica/attuatori.css">
+    <link rel="stylesheet" href="/static/css-generale/sidebar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">SERRAITSAR</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li><a href="/home"><i class='bx bxs-home'></i><span class="links_name">Home</span></a><span class="tooltip">Home</span></li>
+            <li><a href="/piante"><i class='bx bxs-leaf'></i><span class="links_name">Piante</span></a><span class="tooltip">Piante</span></li>
+            <li><a href="/componentistica"><i class='bx bxs-component' ></i><span class="links_name">Componentistica</span></a><span class="tooltip">Componentistica</span></li>
+            <li><a href="/funzionamento"><i class='bx bxs-network-chart'></i><span class="links_name">Funzionamento</span></a><span class="tooltip">Funzionamento</span></li>
+            <li><a href="/storico"><i class='bx bxs-spreadsheet' ></i><span class="links_name">Storico</span></a><span class="tooltip">Storico</span></li>
+            <li class="logout-btn"><a href="#"><i class='bx bx-run'></i><span class="links_name">Log Out</span></a><span class="tooltip">Log Out</span></li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <h2>ATTUATORI</h2>
+        <table class="sensor-table">
+            <thead>
+                <tr>
+                    <th>Simbolo</th>
+                    <th>Nome</th>
+                    <th>Ruolo</th>
+                    <th>Data di Acquisto</th>
+                    <th>Data di Ultima Manutenzione</th>
+                    <th>Stato</th>
+                    <th>Informazioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class='bx bx-brightness' ></i></td>
+                    <td>StripLED</td>
+                    <td>Illuminazione Interno Serra</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-attuatori/stripLED.jpg" alt="Illustrazione della strip di LED">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-attuatori/stripLED-prezzo.png" alt="Confronto del Prezzo della strip di LED">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-bulb' ></i></td>
+                    <td>DiodoLED 1 (DHT11)</td>
+                    <td>Avviso Temperatura</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-attuatori/diodoLED.jpg" alt="Illustrazione del LED">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-attuatori/diodoLED-prezzo.png" alt="Confronto del Prezzo del LED">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-bulb' ></i></td>
+                    <td>DiodoLED 2 (Water Sensor)</td>
+                    <td>Avviso Livello dell'Acqua</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-attuatori/diodoLED.jpg" alt="Illustrazione del LED">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-attuatori/diodoLED-prezzo.png" alt="Confronto del Prezzo del LED">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-cloud-light-rain' ></i></td>
+                    <td>Pompa 1</td>
+                    <td>Annaffiamento (Basilico)</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-attuatori/pompa.jpeg" alt="Illustrazione della breadboard">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-attuatori/pompa-prezzo.png" alt="Confronto del Prezzo della breadboard">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-cloud-light-rain' ></i></td>
+                    <td>Pompa 2</td>
+                    <td>Annaffiamento (Prezzemolo)</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-attuatori/pompa.jpeg" alt="Illustrazione della breadboard">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-attuatori/pompa-prezzo.png" alt="Confronto del Prezzo della breadboard">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-cloud-light-rain' ></i></td>
+                    <td>Pompa 3</td>
+                    <td>Annaffiamento (Menta)</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-attuatori/pompa.jpeg" alt="Illustrazione della breadboard">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-attuatori/pompa-prezzo.png" alt="Confronto del Prezzo della breadboard">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bxs-car-battery'></i></td>
+                    <td>Motore passo-passo</td>
+                    <td>Apertura del Tetto della Serra</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-attuatori/motore.jpg" alt="Illustrazione della presa elettrica">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-attuatori/motore-prezzo.png" alt="Confronto del Prezzo dell'Igrometro">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="navigation-buttons">
+            <button onclick="window.location.href='/componentistica/sensori'">Sensori</button>
+            <button onclick="window.location.href='/componentistica/struttura'">Struttura</button>
+        </div>
+        <div class="center-button">
+            <button onclick="window.location.href='/componentistica'">Componentistica</button>
+        </div>
+    </section>
+    <div id="logoutDialog" class="dialog-overlay">
+        <div class="dialog-box">
+          <h2>Sei sicuro di voler uscire?</h2>
+          <div class="dialog-buttons">
+            <button id="cancelLogout" class="dialog-button cancel">Annulla</button>
+            <button id="confirmLogout" class="dialog-button confirm">Esci</button>
+          </div>
+        </div>
+    </div>
+    <script src="/static/js-scripts/sidebar.js"></script>
+    <script src="/static/js-scripts/dettagli-componentistica.js"></script>
+    <script src="/static/js-scripts/logout.js"></script>
+</body>
+</html>

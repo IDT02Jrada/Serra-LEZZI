@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(170deg, rgb(255, 240, 216), lightgreen);
+    left: 78px;
+    width: calc(100% - 78px);
+    z-index: 2;
+    transition: all 0.5s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    z-index: 1;
+    max-width: 80%;
+}
+
+.title h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.title p {
+    font-size: 18px;
+    color: #6b6b6b;
+    margin-top: 20px;
+}
+
+.column-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.column1 {
+    width: 250px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    background: linear-gradient(180deg, rgb(179, 255, 255), rgb(173, 199, 255));
+    padding: 10px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.column2 {
+    width: 250px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    background: linear-gradient(180deg, rgb(255, 241, 196), #fcff3c);
+    padding: 10px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.column3 {
+    width: 250px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    background: linear-gradient(180deg, rgb(255, 127, 127), rgb(255, 176, 85));
+    padding: 10px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.image-button {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 100px;
+}
+
+.image-button img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100px;
+    cursor: pointer;
+    border: 2px solid rgb(17, 17, 17);
+}
+
+.description {
+    text-align: center;
+}
+
+.home-section .column1 .description h1,
+.home-section .column2 .description h1,
+.home-section .column3 .description h1 {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.home-section .column1 .description ul,
+.home-section .column2 .description ul,
+.home-section .column3 .description ul {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: left;
+}

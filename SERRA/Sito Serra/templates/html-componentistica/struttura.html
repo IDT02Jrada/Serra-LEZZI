@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensori</title>
+    <link rel="stylesheet" href="/static/css-componentistica/struttura.css">
+    <link rel="stylesheet" href="/static/css-generale/sidebar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">SERRAITSAR</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li><a href="/home"><i class='bx bxs-home'></i><span class="links_name">Home</span></a><span class="tooltip">Home</span></li>
+            <li><a href="/piante"><i class='bx bxs-leaf'></i><span class="links_name">Piante</span></a><span class="tooltip">Piante</span></li>
+            <li><a href="/componentistica"><i class='bx bxs-component' ></i><span class="links_name">Componentistica</span></a><span class="tooltip">Componentistica</span></li>
+            <li><a href="/funzionamento"><i class='bx bxs-network-chart'></i><span class="links_name">Funzionamento</span></a><span class="tooltip">Funzionamento</span></li>
+            <li><a href="/storico"><i class='bx bxs-spreadsheet' ></i><span class="links_name">Storico</span></a><span class="tooltip">Storico</span></li>
+            <li class="logout-btn"><a href="#"><i class='bx bx-run'></i><span class="links_name">Log Out</span></a><span class="tooltip">Log Out</span></li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <h2>STRUTTURA</h2>
+        <table class="sensor-table">
+            <thead>
+                <tr>
+                    <th>Simbolo</th>
+                    <th>Nome</th>
+                    <th>Ruolo</th>
+                    <th>Data di Acquisto</th>
+                    <th>Data di Ultima Manutenzione</th>
+                    <th>Stato</th>
+                    <th>Informazioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class='bx bx-grid'></i></td>
+                    <td>Breadboard</td>
+                    <td>Area di sperimentazione</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-struttura/breadboard.jpg" alt="Illustrazione della breadboard">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-struttura/breadboard-prezzo.png" alt="Confronto del Prezzo della breadboard">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-chip'></i></td>
+                    <td>Arduino</td>
+                    <td>Microcontrollore Programmabile</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-struttura/Arduino.jpg" alt="Illustrazione di Arduino">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-struttura/Arduino-prezzo.png" alt="Confronto del Prezzo di Arduino">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-toggle-left' ></i></td>
+                    <td>Relè 1</td>
+                    <td>Interruttore Elettrico Controllato (StripLED)</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-struttura/relè.webp" alt="Illustrazione del Relè 1">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Collegamento al Circuito</h3>
+                            <img src="/static/foto-struttura/relè-setup.jpeg" alt="Collegamento al Circuito del Relè 1">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-struttura/relè-prezzo.png" alt="Confronto del Prezzo del Relè 1">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-toggle-left' ></i></td>
+                    <td>Relè 2</td>
+                    <td>Interruttore Elettrico Controllato (Pompa-Basilico)</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-struttura/relè.webp" alt="Illustrazione del Relè 2">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Collegamento al Circuito</h3>
+                            <img src="/static/foto-struttura/relè-setup.jpeg" alt="Collegamento al Circuito del Relè 2">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-struttura/relè-prezzo.png" alt="Confronto del Prezzo del Relè 2">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-toggle-left' ></i></td>
+                    <td>Relè 3</td>
+                    <td>Interruttore Elettrico Controllato (Pompa-Prezzemolo)</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-struttura/relè.webp" alt="Illustrazione del Relè 2">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Collegamento al Circuito</h3>
+                            <img src="/static/foto-struttura/relè-setup.jpeg" alt="Collegamento al Circuito del Relè 2">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-struttura/relè-prezzo.png" alt="Confronto del Prezzo del Relè 2">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-toggle-left' ></i></td>
+                    <td>Relè 4</td>
+                    <td>Interruttore Elettrico Controllato (Pompa-Menta)</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-struttura/relè.webp" alt="Illustrazione del Relè 2">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Collegamento al Circuito</h3>
+                            <img src="/static/foto-struttura/relè-setup.jpeg" alt="Collegamento al Circuito del Relè 2">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-struttura/relè-prezzo.png" alt="Confronto del Prezzo del Relè 2">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-toggle-left' ></i></td>
+                    <td>Relè 5</td>
+                    <td>Interruttore Elettrico Controllato (Motore passo-passo)</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-struttura/relè.webp" alt="Illustrazione del Relè 3">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Collegamento al Circuito</h3>
+                            <img src="/static/foto-struttura/relè-setup.jpeg" alt="Collegamento al Circuito del Relè 3">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-struttura/relè-prezzo.png" alt="Confronto del Prezzo del Relè 3">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-plug' ></i></td>
+                    <td>Presa Elettrica</td>
+                    <td>Alimentazione</td>
+                    <td>17/07/2024</td>
+                    <td>17/07/2024</td>
+                    <td><button class="sensor-status active">Attivo</button></td>
+                    <td><button class="toggle-details">Dettagli</button></td>
+                </tr>
+                <tr class="sensor-details">
+                    <td colspan="7">
+                        <div class="sensor-detail-item">
+                            <h3>Illustrazione del Componente</h3>
+                            <img src="/static/foto-struttura/presa.jpg" alt="Illustrazione della presa elettrica">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Collegamento al Circuito</h3>
+                            <img src="/static/foto-struttura/relè-setup.jpeg" alt="Collegamento al Circuito dell'Igrometro">
+                        </div>
+                        <div class="sensor-detail-item">
+                            <h3>Confronto del Prezzo</h3>
+                            <img src="/static/foto-struttura/presa-prezzo.png" alt="Confronto del Prezzo dell'Igrometro">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="navigation-buttons">
+            <button onclick="window.location.href='/componentistica/attuatori'">Attuatori</button>
+            <button onclick="window.location.href='/componentistica/sensori'">Sensori</button>
+        </div>
+        <div class="center-button">
+            <button onclick="window.location.href='/componentistica'">Componentistica</button>
+        </div>
+    </section>
+    <div id="logoutDialog" class="dialog-overlay">
+        <div class="dialog-box">
+          <h2>Sei sicuro di voler uscire?</h2>
+          <div class="dialog-buttons">
+            <button id="cancelLogout" class="dialog-button cancel">Annulla</button>
+            <button id="confirmLogout" class="dialog-button confirm">Esci</button>
+          </div>
+        </div>
+      </div>
+    <script src="/static/js-scripts/sidebar.js"></script>
+    <script src="/static/js-scripts/dettagli-componentistica.js"></script>
+    <script src="/static/js-scripts/logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Dettagli Piante</title>
+    <link rel="stylesheet" href="/static/css-generale/sidebar.css">
+    <link rel="stylesheet" href="/static/css-dettagli-piante/dettagli-pianta1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">SERRAITSAR</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li><a href="/home"><i class='bx bxs-home'></i><span class="links_name">Home</span></a><span class="tooltip">Home</span></li>
+            <li><a href="/piante"><i class='bx bxs-leaf'></i><span class="links_name">Piante</span></a><span class="tooltip">Piante</span></li>
+            <li><a href="/componentistica"><i class='bx bxs-component' ></i><span class="links_name">Componentistica</span></a><span class="tooltip">Componentistica</span></li>
+            <li><a href="/funzionamento"><i class='bx bxs-network-chart'></i><span class="links_name">Funzionamento</span></a><span class="tooltip">Funzionamento</span></li>
+            <li><a href="/storico"><i class='bx bxs-spreadsheet' ></i><span class="links_name">Storico</span></a><span class="tooltip">Storico</span></li>
+            <li class="logout-btn"><a href="#"><i class='bx bx-run'></i><span class="links_name">Log Out</span></a><span class="tooltip">Log Out</span></li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="card">
+            <img class="card-img" src="/static/foto-piante/pianta1.png">
+            <div class="card-body">
+                <h5>Basilico</h5>
+                <p>Il basilico è una pianta annuale della famiglia delle Lamiaceae, originaria dell'India ed apprezzato per il suo profumo distintivo. Cresce fino a 60 cm di altezza, con foglie ovali o lanceolate di diversi colori, dal verde pallido al viola intenso. I fiori, bianchi o rosei, sono raggruppati in infiorescenze e i semi sono neri e fini.</p>
+                <ul>
+                    <li><span>Temperatura:</span> Min: 18°C - Max: 26°C</li>
+                    <li><span>Umidità ambientale:</span> Min: 40% - Max: 60%</li>
+                    <li><span>Luminosità:</span> 6-8 ore di luce naturale o 12-16 ore di luce artificiale</li>
+                </ul>
+            </div>
+        </div>
+        <div class="navigation-button-exit">
+            <button onclick="window.location.href='/piante'">Torna alle Piante</button>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="window.location.href='/piante/dettagli-pianta2'">Dettagli Pianta Successiva</button>
+        </div>
+    </section>
+    <div id="logoutDialog" class="dialog-overlay">
+        <div class="dialog-box">
+          <h2>Sei sicuro di voler uscire?</h2>
+          <div class="dialog-buttons">
+            <button id="cancelLogout" class="dialog-button cancel">Annulla</button>
+            <button id="confirmLogout" class="dialog-button confirm">Esci</button>
+          </div>
+        </div>
+      </div>
+    <script src="/static/js-scripts/sidebar.js"></script>
+    <script src="/static/js-scripts/logout.js"></script>
+</body>
+</html>

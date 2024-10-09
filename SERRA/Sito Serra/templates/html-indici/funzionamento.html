@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzionamento</title>
+    <link rel="stylesheet" href="/static/css-generale/sidebar.css">
+    <link rel="stylesheet" href="/static/css-indici/funzionamento.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">SERRAITSAR</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li><a href="/home"><i class='bx bxs-home'></i><span class="links_name">Home</span></a><span class="tooltip">Home</span></li>
+            <li><a href="/piante"><i class='bx bxs-leaf'></i><span class="links_name">Piante</span></a><span class="tooltip">Piante</span></li>
+            <li><a href="/componentistica"><i class='bx bxs-component' ></i><span class="links_name">Componentistica</span></a><span class="tooltip">Componentistica</span></li>
+            <li><a href="/funzionamento"><i class='bx bxs-network-chart'></i><span class="links_name">Funzionamento</span></a><span class="tooltip">Funzionamento</span></li>
+            <li><a href="/storico"><i class='bx bxs-spreadsheet' ></i><span class="links_name">Storico</span></a><span class="tooltip">Storico</span></li>
+            <li class="logout-btn"><a href="#"><i class='bx bx-run'></i><span class="links_name">Log Out</span></a><span class="tooltip">Log Out</span></li>
+        </ul>
+    </div>
+    <div id="logoutDialog" class="dialog-overlay">
+        <div class="dialog-box">
+          <h2>Sei sicuro di voler uscire?</h2>
+          <div class="dialog-buttons">
+            <button id="cancelLogout" class="dialog-button cancel">Annulla</button>
+            <button id="confirmLogout" class="dialog-button confirm">Esci</button>
+          </div>
+        </div>
+    </div>
+    <div class="home-section">
+        <div class="header">
+            <h1>FUNZIONAMENTO</h1>
+            <p>Hai la possibilità di premere su uno dei pulsanti qui sotto per visualizzare il corrispondente funzionamento</p>
+        </div>
+        <div class="buttons-funz">
+            <div class="bottone">
+                <button id="buttonConcettuale" class="button1">Funzionamento Concettuale</button>
+            </div>
+            <div class="bottone">
+                <button id="button-fisico" class="button2">Funzionamento Fisico</button>
+            </div>
+            <div class="bottone">
+                <button id="button-codice" class="button3">Funzionamento del Codice</button>
+            </div>
+        </div>
+        <div id="attesaSelezione" class="attesa-selezione">
+            <img src="/static/foto-funzionamento/attesa-selezione.svg" alt="Attesa Selezione">
+            <p>Premi uno dei pulsanti in alto per visualizzare il funzionamento corrispondente.</p>
+        </div>
+        <div id="interfacciaConcettuale" class="funz-concettuale">
+            <h1>FUNZIONAMENTO CONCETTUALE</h1>
+            <div class="funz-concettuale-desc">
+                <img src="/static/foto-funzionamento/concettuale.png">
+                <p>L'immagine rappresenta uno schema logico che ha lo scopo di facilitare la comprensione dell'obiettivo del circuito. 
+                    In questo caso, abbiamo degli "Stati Iniziali" che rappresentano l'inizio di un "problema". 
+                    <span>Per risolvere questi problemi, utilizziamo la capacità di rilevarli tramite i sensori e successivamente di agire su di essi tramite gli attuatori.</span>
+                    Ogni percorso può avere passi aggiuntivi o alternativi che altri percorsi potrebbero non avere, 
+                    ma l'abilità di portare il problema a uno stato risolto è presente in tutti i percorsi.
+                </p>
+            </div>
+        </div>
+        <div id="interfacciaFisica" class="funz-fisica">
+            <h1>FUNZIONAMENTO FISICO</h1>
+            <div class="funz-fisica-desc">
+                <p>Questa sezione mostra il collegamento fisico del nostro progetto. Il circuito sottostante è una rappresentazione più ordinata e chiara dei collegamenti per facilitare la comprensione. <span>Passando il cursore su un elemento specifico, sarà possibile visualizzarne il nome e il ruolo all'interno del circuito. (In caso non funzioni, fare zoom-in e zoom-out)</span>
+                </p>
+                <div id="immagine-container-foto-fisica">
+                    <img src="/static/foto-funzionamento/fritzing.png" usemap="#image-map">
+                    <map name="image-map">
+                        <area href="#" coords="516,942,635,942,639,1005,735,1014,721,1706,598,1710,567,1738,230,1733,184,1706,171,1001,512,1005" shape="poly" data-name="ELEGOO UNO R3." data-role="Microcontrollore Programmabile.">
+                        <area href="#" coords="46,2029,246,2029,260,2092,228,2129,219,2179,260,2224,265,2697,42,2697,42,2215,78,2179,74,2111,33,2088" shape="poly" data-name="Water Sensor." data-role="Sensore per la rilevazione del livello dell'acqua nel serbatoio.">
+                        <area href="#" coords="947,2042,1106,2042,1101,2397,1042,2384,1033,2452,1137,2461,1137,3011,1097,3102,1051,3002,1056,2602,1019,2566,992,2616,987,3002,960,3107,910,2998,915,2452,992,2452,1006,2384,947,2384" shape="poly" data-name="Igrometro 1." data-role="Sensore per la rilevazione dell'umidità nel terreno. (Basilico)">
+                        <area href="#" coords="1210,2042,1369,2042,1369,2402,1315,2379,1310,2452,1401,2456,1406,3002,1365,3102,1319,3007,1328,2597,1283,2566,1256,2602,1265,3016,1228,3116,1183,3002,1183,2443,1265,2452,1269,2379,1210,2379" shape="poly" data-name="Igrometro 2." data-role="Sensore per la rilevazione dell'umidità nel terreno. (Prezzemolo)">
+                        <area href="#" coords="1461,2052,1615,2057,1611,2389,1561,2394,1556,2457,1652,2466,1647,3012,1615,3117,1565,3012,1574,2617,1529,2580,1506,2617,1515,3021,1474,3112,1433,3012,1433,2462,1515,2462,1515,2389,1461,2385" shape="poly" data-name="Igrometro 3." data-role="Sensore per la rilevazione dell'umidità nel terreno. (Menta)">
+                        <area href="#" coords="1848,2052,1848,2429,2193,2429,2198,2056" shape="poly" data-name="Driver del Motore passo-passo." data-role="Permette di far capire le istruzioni date su ArduinoIDE al Motore passo-passo.">
+                        <area href="#" coords="1961,3176,2170,3166,2170,3262,2215,3322,2229,3363,2270,3363,2288,3390,2275,3417,2220,3422,2202,3463,2188,3504,2143,3549,2056,3563,2006,3549,1956,3535,1934,3513,1902,3481,1897,3426,1843,3408,1870,3372,1906,3372,1929,3299,1956,3262" shape="poly" data-name="Motore passo-passo." data-role="L'attuatore che permetterà di aprire il tetto della serra ed arieggiarla.">
+                        <area href="#" coords="1183,323,1210,314,1197,282,1347,287,1338,332,1369,332,1374,523,1178,523,1183,396" shape="poly" data-name="DHT11." data-role="Sensore per la rilevazione della temperatura e dell'umidità nell'aria interna alla serra.">
+                        <area href="#" coords="2365,159,2360,541,2547,546,2542,159" shape="poly" data-name="Scheda Bluetooth." data-role="Permetterà la connessione ad Arduino senza ulteriori cavi.">
+                        <area href="#" coords="4264,1365,5146,1365,5146,1483,4269,1492" shape="poly" data-name="LEDstrip." data-role="Illuminerà l'interno della serra in caso di scarsa luminosità.">
+                        <area href="#" coords="3269,1279,3846,1270,3846,1502,3269,1502" shape="poly" data-name="Relè1." data-role="Farà da interruttore NO (Normalmente Aperto) per la LEDstrip.">
+                        <area href="#" coords="3269,1502,3850,1506,3850,1670,3269,1679" shape="poly" data-name="Relè2." data-role="Farà da interruttore NO (Normalmente Aperto) per la Pompa1.">
+                        <area href="#" coords="3259,1670,3850,1670,3850,1838,3269,1833" shape="poly" data-name="Relè3." data-role="Farà da interruttore NO (Normalmente Aperto) per la Pompa2.">
+                        <area href="#" coords="3259,1821,3850,1834,3855,2071,3269,2071" shape="poly" data-name="Relè4." data-role="Farà da interruttore NO (Normalmente Aperto) per la Pompa3.">
+                        <area href="#" coords="3259,2080,3846,2080,3855,2326,3269,2321" shape="poly" data-name="Relè5." data-role="Farà da interruttore NO (Normalmente Aperto) per il Driver del Motore passo-passo.">
+                        <area href="#" coords="4473,1583,4496,1556,5073,1556,5110,1588,5110,1833,5087,1892,4523,1879,4464,1856" shape="poly" data-name="Pompa1." data-role="Attuatore che Annaffierà la corrispondente pianta. (Basilico)">
+                        <area href="#" coords="4473,1937,4469,2187,4519,2228,5078,2228,5110,2196,5110,1942,5055,1905,4505,1905" shape="poly" data-name="Pompa2." data-role="Attuatore che Annaffierà la corrispondente pianta. (Prezzemolo)">
+                        <area href="#" coords="4473,2289,4469,2539,4501,2575,5078,2575,5110,2548,5110,2302,5082,2262,4496,2262" shape="poly" data-name="Pompa3." data-role="Attuatore che Annaffierà la corrispondente pianta. (Menta)">
+                        <area href="#" coords="3578,2980,3578,3548,3850,3548,3850,2975" shape="poly" data-name="Alimentazione dei Relè." data-role="Alimenterà la zona del circuito che parte dai Relè.">
+                        <area href="#" coords="104,-3,422,-3,422,597,100,597" shape="poly" data-name="Alimentazione di Arduino." data-role="Alimenterà la zona del circuito che parte da Arduino.">
+                        <area href="#" coords="1391,656,1518,801" shape="rect" data-name="DiodoLED1." data-role="Avvertirà se la temperatura diventa elevata accendendosi.">
+                        <area href="#" coords="1552,664,1686,799" shape="rect" data-name="DiodoLED2." data-role="Avvertirà se il livello dell'acqua è in esaurimento accendendosi.">
+                        <area href="#" coords="1536,1076,1405,926" shape="rect" data-name="Resistore1." data-role="Limiterà la corrente elettrica regolando la tensione che passa sul DiodoLED per il DHT11.">
+                        <area href="#" coords="1573,928,1691,1065" shape="rect" data-name="Resistore2." data-role="Limiterà la corrente elettrica regolando la tensione che passa sul DiodoLED per il Sensore dell'acqua.">
+                        <area href="#" coords="1914,950,2037,1077" shape="rect" data-name="GL5516." data-role="Sensore per la rilevazione della luminosità all'interno della serra.">
+                        <area href="#" coords="1928,1134,2046,1243" shape="rect" data-name="Resistore3." data-role="Limiterà la corrente elettrica regolando la tensione che passa sul DiodoLED per il fotoresistore.">
+                    </map>
+                    <div id="schedina" class="schedina"></div>
+                </div>
+            </div>
+        </div>
+        <div id="interfacciaCodice" class="funz-codice">
+            <h1>FUNZIONAMENTO DEL CODICE</h1>
+            <div class="funz-codice-desc">
+                <p>
+                    Qui sotto, hai la possibilità di visualizzare il codice che abbiamo creato su ArduinoIDE per poter <span>IMPORTARE</span>, <span>DICHIARARE</span>, <span>INIZIALIZZARE</span> e <span>MANDARE</span> in loop le diverse istruzioni e condizioni di funzionamento del circuito.
+                </p>
+            <div class="arduino-codice"><iframe src="https://app.arduino.cc/sketches/5a3c7b94-7c92-46dc-8e87-6ac771174a41?view-mode=embed" style="height:700px;width:90%;margin:10px 0" frameborder=10px></iframe>
+        </div>
+    </div>
+    <script src="/static/js-scripts/funzionamenti.js"></script>
+    <script src="static/js-scripts/sidebar.js"></script>
+    <script src="static/js-scripts/sistemazione-image-map.js"></script>
+    <script src="/static/js-scripts/logout.js"></script>
+</body>
+</html>

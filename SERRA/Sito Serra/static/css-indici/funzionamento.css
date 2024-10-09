@@ -1,0 +1,263 @@
+body {
+    height: 1500px;
+}
+
+.sidebar.open ~ .home-section {
+    margin-left: 250px;
+}
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(170deg, rgb(255, 240, 216), lightgreen);
+    left: 0px;
+    width: calc(100% - 0px);
+    transition: all 0.5s ease;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+    transition: margin-left 0.5s ease;
+}
+
+.header h1 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+}
+
+.header p {
+    margin-top: 15px;
+    font-family: Arial;
+    color: black;
+}
+
+.buttons-funz {
+    padding: 30px;
+    display: flex;
+}
+
+.buttons-funz .bottone button {
+    background: linear-gradient(90deg, black, black);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 20px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+.buttons-funz .bottone button:hover {
+    background: linear-gradient(90deg, rgb(255, 194, 25), rgb(228, 21, 255));
+    padding: 25px 64px;
+    transition: all 0.2s;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.buttons-funz .bottone button:active {
+    background: linear-gradient(90deg, rgb(255, 194, 25), rgb(228, 21, 255));
+    padding: 25px 64px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: border 0.01s;
+    border: solid 2px black;
+}
+
+#interfacciaConcettuale, #interfacciaFisica, #interfacciaCodice {
+    display: none;
+}
+
+.attesa-selezione {
+    display: flex;
+}
+
+
+.funz-concettuale {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    height: 550px;
+    border: 2px rgb(65, 65, 65) solid;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.funz-concettuale h1 {
+    margin: 40px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.funz-concettuale .funz-concettuale-desc {
+    display: flex;
+    height: 400px;
+
+}
+
+.funz-concettuale-desc img {
+    width: 750px;
+    height: 350px;
+    border: 3px black solid;
+    margin-left: 20px;
+}
+
+.funz-concettuale-desc p {
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.funz-concettuale-desc p span {
+    font-weight: bold;
+}
+
+.funz-fisica {
+    width: 1200px;
+    height: 1000px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px grey solid;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.funz-fisica h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 40px;
+}
+
+.funz-fisica .funz-fisica-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.funz-fisica-desc img {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    border: 3px black solid;
+    margin-left: 0px;
+    padding: 15px;
+    background-color: white;
+}
+
+#immagine-container-foto-fisica {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.funz-fisica-desc p {
+    text-align: center;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+.funz-fisica-desc p span {
+    font-weight: bold;
+}
+
+.funz-codice {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 1200px;
+    height: 950px;
+    border: 2px grey solid;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+}
+
+.funz-codice .funz-codice.desc {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+}
+
+.funz-codice h1 {
+    text-decoration: underline;
+    padding: 40px;
+}
+
+.funz-codice-desc p {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.funz-codice-desc p span {
+    font-weight: bold;
+}
+
+.attesa-selezione {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    width: 100%;
+    text-align: center;
+}
+
+.attesa-selezione img {
+    width: 300px;
+    height: auto;
+}
+
+.attesa-selezione p {
+    font-family: Arial;
+    font-style: oblique;
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+    margin-top: 20px;
+}
+
+.schedina {
+    display: none;
+    position: absolute;
+    background: #ffcd82;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    max-width: 250px;
+    z-index: 1000;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+}

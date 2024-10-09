@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigazione</title>
+    <link rel="stylesheet" href="static/css-indici/componentistica.css">
+    <link rel="stylesheet" href="static/css-generale/sidebar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">SERRAITSAR</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li><a href="/home"><i class='bx bxs-home'></i><span class="links_name">Home</span></a><span class="tooltip">Home</span></li>
+            <li><a href="/piante"><i class='bx bxs-leaf'></i><span class="links_name">Piante</span></a><span class="tooltip">Piante</span></li>
+            <li><a href="/componentistica"><i class='bx bxs-component'></i><span class="links_name">Componentistica</span></a><span class="tooltip">Componentistica</span></li>
+            <li><a href="/funzionamento"><i class='bx bxs-network-chart'></i><span class="links_name">Funzionamento</span></a><span class="tooltip">Funzionamento</span></li>
+            <li><a href="/storico"><i class='bx bxs-spreadsheet' ></i><span class="links_name">Storico</span></a><span class="tooltip">Storico</span></li>
+            <li class="logout-btn"><a href="#"><i class='bx bx-run'></i><span class="links_name">Log Out</span></a><span class="tooltip">Log Out</span></li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="title">
+            <header>
+                <h1>COMPONENTISTICA</h1>
+                <p>Abbiamo deciso di scomporre la componentistica in 3 parti per più ordine, invece di mostrare tutti gli elementi</p>
+            </header>
+        </div>
+        <div class="column-container">
+            <div class="column1">
+                <a href="/componentistica/struttura" class="image-button">
+                    <img src="/static/foto-componentistica/struttura.jpg"></a>
+                <div class="description">
+                    <h1>Struttura</h1>
+                    <ul>
+                        <li>1x Breadboard</li>
+                        <li>1x Arduino</li>
+                        <li>3x Relè</li>
+                        <li>1x Presa Elettrica</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column2">
+                <a href="/componentistica/sensori" class="image-button">
+                    <img src="/static/foto-componentistica/sensori.jpg"></a>
+                <div class="description">
+                    <h1>Sensori</h1>
+                    <ul>
+                        <li>1x DHT11</li>
+                        <li>1x Water Sensor</li>
+                        <li>1x Fotoresistore</li>
+                        <li>4x Igrometri</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column3">
+                <a href="/componentistica/attuatori" class="image-button">
+                    <img src="/static/foto-componentistica/attuatori.jpg"></a>
+                <div class="description">
+                    <h1>Attuatori</h1>
+                    <ul>
+                        <li>1x Striscia LED</li>
+                        <li>2x DiodiLED</li>
+                        <li>4x Pompe</li>
+                        <li>1x Motore step</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="logoutDialog" class="dialog-overlay">
+        <div class="dialog-box">
+          <h2>Sei sicuro di voler uscire?</h2>
+          <div class="dialog-buttons">
+            <button id="cancelLogout" class="dialog-button cancel">Annulla</button>
+            <button id="confirmLogout" class="dialog-button confirm">Esci</button>
+          </div>
+        </div>
+      </div>
+    <script src="static/js-scripts/sidebar.js"></script>
+    <script src="static/js-scripts/logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storico</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="static/css-indici/storico.css">
+    <link rel="stylesheet" href="static/css-generale/sidebar.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <!-- Importa Plotly -->
+    <script src="static/js-scripts/storico.js" defer></script> <!-- Importa il file JS -->
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">SERRAITSAR</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li><a href="/home"><i class='bx bxs-home'></i><span class="links_name">Home</span></a><span class="tooltip">Home</span></li>
+            <li><a href="/piante"><i class='bx bxs-leaf'></i><span class="links_name">Piante</span></a><span class="tooltip">Piante</span></li>
+            <li><a href="/componentistica"><i class='bx bxs-component'></i><span class="links_name">Componentistica</span></a><span class="tooltip">Componentistica</span></li>
+            <li><a href="/funzionamento"><i class='bx bxs-network-chart'></i><span class="links_name">Funzionamento</span></a><span class="tooltip">Funzionamento</span></li>
+            <li><a href="/storico"><i class='bx bxs-spreadsheet'></i><span class="links_name">Storico</span></a><span class="tooltip">Storico</span></li>
+            <li class="logout-btn"><a href="#"><i class='bx bx-run'></i><span class="links_name">Log Out</span></a><span class="tooltip">Log Out</span></li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="top-bar">
+            <button id="showGraphButton">Visualizza Grafico</button>
+        </div>
+        <div class="big-container">
+            <div class="container">
+                <h1>STORICO</h1>
+                <div class="filters">
+                    <label>Filtra per:</label>
+
+                    <label for="fromDate">Da Giorno:</label>
+                    <input type="date" id="fromDate">
+                    
+                    <label for="toDate">A Giorno:</label>
+                    <input type="date" id="toDate">
+                    
+                    <label for="fromTime">Da Ora:</label>
+                    <input type="time" id="fromTime">
+                    
+                    <label for="toTime">A Ora:</label>
+                    <input type="time" id="toTime">
+                    
+                    <button id="applyFilter">Applica Filtro</button>
+                </div>
+                <div id="chart" style="display: none; display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 20px; margin: 20px;">
+                    <div id="tempChart" style="width: 100%; height: 400px;"></div>
+                    <div id="illuminazioneChart" style="width: 100%; height: 400px;"></div>
+                    <div id="livelloChart" style="width: 100%; height: 400px;"></div>
+                    <div id="combinedHumidityChart" style="width: 100%; height: 400px;"></div>
+                </div>
+                <div class="table-container">
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Temp (°C)</th>
+                                <th>Umidità (%)</th>
+                                <th>Umid. Terr. Basilico (%)</th>
+                                <th>Umid. Terr. Prezzemolo (%)</th>
+                                <th>Umid. Terr. Menta (%)</th>
+                                <th>Illuminazione</th>
+                                <th>Liv. Serbatoio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <p id="noDataMessage" style="display: none; text-align: center; color: red; font-size: 1.2em; margin-top: 30px;">
+                        Nessun dato rientra nei filtri desiderati.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="logoutDialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <h2>Sei sicuro di voler uscire?</h2>
+            <div class="dialog-buttons">
+                <button id="cancelLogout" class="dialog-button cancel">Annulla</button>
+                <button id="confirmLogout" class="dialog-button confirm">Esci</button>
+            </div>
+        </div>
+    </div>
+    <script src="static/js-scripts/sidebar.js"></script>
+    <script src="static/js-scripts/logout.js"></script>
+</body>
+</html>

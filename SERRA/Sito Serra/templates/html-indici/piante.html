@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Piante</title>
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <link rel="stylesheet" href="static/css-indici/piante.css">
+  <link rel="stylesheet" href="static/css-generale/sidebar.css">
+  <link rel="stylesheet" href="static/css-generale/meteo-piante.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">SERRAITSAR</div>
+        <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <ul class="nav-list">
+        <li><a href="/home"><i class='bx bxs-home'></i><span class="links_name">Home</span></a><span class="tooltip">Home</span></li>
+        <li><a href="/piante"><i class='bx bxs-leaf'></i><span class="links_name">Piante</span></a><span class="tooltip">Piante</span></li>
+        <li><a href="/componentistica"><i class='bx bxs-component' ></i><span class="links_name">Componentistica</span></a><span class="tooltip">Componentistica</span></li>
+        <li><a href="/funzionamento"><i class='bx bxs-network-chart'></i><span class="links_name">Funzionamento</span></a><span class="tooltip">Funzionamento</span></li>
+        <li><a href="/storico"><i class='bx bxs-spreadsheet' ></i><span class="links_name">Storico</span></a><span class="tooltip">Storico</span></li>
+        <li class="logout-btn"><a href="#"><i class='bx bx-run'></i><span class="links_name">Log Out</span></a><span class="tooltip">Log Out</span></li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="header">
+      <h1>PIANTE</h1>
+    </div>
+    <div class="spazio-per-meteo">
+      <div class="container-meteo-esterno">
+        <div class="meteo-esterno">
+          <h1 id="location"><span></span></h1>
+          <div class="meteo-emoji">☀️☁️</div>
+          <div id="weather">
+            <p>Temperatura: <span id="temperature"></span>°C</p>
+            <p>Umidità: <span id="humidity"></span>%</p>
+            <div class="temp-min-max">
+              <p>Temp. Min: <span id="temp-min"></span>°C</p>
+              <p>Temp. Max: <span id="temp-max"></span>°C</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-meteo-interno">
+        <div class="meteo-interno">
+          <h1>Rilevazioni Generali Serra</h1>
+          <div class="box-rilevazioni">
+            <div class="rilevazioni-row" id="temp">
+              <p><i class='bx bxs-hot'></i>Temperatura: <span id="internal-temperature"></span>°C</p>
+            </div>
+            <div class="rilevazioni-row" id="hum">
+              <p><i class='bx bx-droplet'></i>Umidità: <span id="internal-humidity"></span>%</p>
+            </div>
+            <div class="rilevazioni-row" id="light">
+              <p><i class='bx bx-bulb'></i>Luminosità: <span id="internal-lighting"></span></p>
+            </div>
+            <div class="rilevazioni-row" id="tank">
+              <p><i class='bx bx-water'></i>Serbatoio: <span id="tanky-status"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-piante">
+      <p>Qui troverai informazioni sulle diverse piante, inclusi i loro requisiti di crescita come temperatura, esposizione alla luce solare e umidità premendo sulle rispettive piante.</p>
+    </div>
+    <div class="spazio-per-piante">
+      <div class="container-piante">
+        <div class="img-dettagli-pianta">
+          <img src="/static/foto-piante/pianta1.png">
+          <button class="dettagli-piante" onclick="location.href='/piante/dettagli-pianta1'">Dettagli Basilico</button>
+        </div>
+        <div class="stats-piante">
+          <p>Umidità Terreno: <span id="soil-humidity1"></span></p>
+          <p>Ultima Annaffiata: <span>00:00:00</span></p>
+        </div>
+      </div>
+      <div class="container-piante">
+        <div class="img-dettagli-pianta">
+          <img src="/static/foto-piante/pianta2.png">
+          <button class="dettagli-piante" onclick="location.href='/piante/dettagli-pianta2'">Dettagli Prezzemolo</button>
+        </div>
+        <div class="stats-piante">
+          <p>Umidità Terreno: <span id="soil-humidity2"></span></p>
+          <p>Ultima Annaffiata: <span>00:00:00</span></p>
+        </div>
+      </div>
+      <div class="container-piante">
+        <div class="img-dettagli-pianta">
+          <img src="/static/foto-piante/pianta3.png">
+          <button class="dettagli-piante" onclick="location.href='/piante/dettagli-pianta3'">Dettagli Menta</button>
+        </div>
+        <div class="stats-piante">
+          <p>Umidità Terreno: <span id="soil-humidity3"></span></p>
+          <p>Ultima Annaffiata: <span>00:00:00</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="logoutDialog" class="dialog-overlay">
+    <div class="dialog-box">
+      <h2>Sei sicuro di voler uscire?</h2>
+      <div class="dialog-buttons">
+        <button id="cancelLogout" class="dialog-button cancel">Annulla</button>
+        <button id="confirmLogout" class="dialog-button confirm">Esci</button>
+      </div>
+    </div>
+  </div>
+  <script src="static/js-scripts/meteo.js"></script>
+  <script src="static/js-scripts/sidebar.js"></script>
+  <script src="static/js-scripts/polling-dati.js"></script>
+  <script src="static/js-scripts/logout.js"></script>
+</body>
+</html>

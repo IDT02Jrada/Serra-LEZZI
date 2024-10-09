@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/css-forms/login.css">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="/login", method="post">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt' ></i>
+                <p class="errore">
+                    {{error}}
+                </p>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Non hai un account? <a href="/registrazione">Registrati</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="svg-1">
+        <img src="/static/css-forms/svg-1.svg">
+    </div>
+    <div class="svg-2">
+        <img src="/static/css-forms/svg-2.svg">
+    </div>
+    <div class="svg-3">
+        <img src="/static/css-forms/svg-3.svg">
+    </div>
+    <div class="svg-4">
+        <img src="/static/css-forms/svg-4.svg">
+    </div>
+</body>
+</html>

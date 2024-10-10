@@ -14,6 +14,10 @@ Il progetto utilizza diversi sensori ed attuatori connessi ad Arduino per automa
 Nel progetto, utilizzo XAMPP per gestire un server Apache e un database MySQL. La connessione al database MySQL viene stabilita tramite il modulo "mysql.connector" in Python, che permette di interagire con il database per salvare i dati rilevati dai sensori della serra automatizzata.
 </details>
 
+<details>
+ SENZA XAMPP (creazione del web-server e del DBMS necessario) L'ACCESSO AL SITO NON SARA' POSSIBILE
+</details>
+
 ## Descrizione dei File
 
 <details>

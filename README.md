@@ -2,15 +2,14 @@
 
 Questo progetto è un sito web locale sviluppato con Python (Flask), HTML, CSS e JavaScript, che permette di monitorare in tempo reale una serra automatizzata. Il sistema è progettato per fornire una panoramica completa delle condizioni interne della serra, inclusi i valori di temperatura, umidità, luminosità, livello dell'acqua nel serbatoio e umidità del terreno per tre piante: basilico, prezzemolo e menta.
 
+SENZA XAMPP (creazione del web-server e del DBMS necessario) L'ACCESSO AL SITO NON SARA' POSSIBILE
+
+
 ## Componenti
 
 <details>
 <summary>Sistema di Monitoraggio Ambientale Basato su Arduino</summary>
 Il progetto utilizza diversi sensori ed attuatori connessi ad Arduino per automatizzare e monitorare la serra. Un DHT11 rileva temperatura e umidità interne, mentre un fotoresistore misura la luminosità. Il livello dell'acqua nel serbatoio è monitorato dal sensore apposito, e tre igrometri misurano l'umidità del terreno per basilico, prezzemolo e menta. Cinque relè controllano altrettanti attuatori: uno gestisce un motore passo-passo per aprire lo sportello della serra se la temperatura supera una soglia; uno accende una strip LED per l'illuminazione interna; e tre attivano le pompe d'acqua per irrigare le piante quando l'umidità del terreno scende sotto il livello desiderato.
-</details>
-
-<details>
- SENZA XAMPP (creazione del web-server e del DBMS necessario) L'ACCESSO AL SITO NON SARA' POSSIBILE
 </details>
 
 <details>
